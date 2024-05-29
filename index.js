@@ -247,3 +247,57 @@ method takes a string as an input (called 'type'), which can be either 'string'
 or 'array'. If type is 'array', simply display the results array as it is, using
 console.log(). This should be the default option. If type is 'string', display a
 string like "Poll results are 13, 2, 4, 1"**/
+function count (){
+    let passenger = 0;
+    return function(){
+        console.log(passenger)
+        passenger++
+        console.log(passenger)
+    }
+}
+const book = count();
+console.dir(book)
+// console.log(book)
+book()
+// book()
+// book()
+let f;
+const calc = function(){
+    let x = 123;
+    return f = function(){
+        console.log(x*2)
+    }
+}
+calc()
+f(
+)
+f()
+console.dir(f)
+const another = function(){
+    let x = 2
+    return f = function (){
+        console.log(x*12)
+    }
+}
+another()
+f()
+const airBording = function(passenger , wait){
+    let group = Math.floor(passenger/3);
+    setTimeout(() => {
+        console.log(`Dear coustomers thanks for waiting your ${wait} second and its pass time `)
+    },wait* 1000);
+    console.log(`sir you have total ${group} in line so wait until ${wait} second`)
+}
+airBording(100,3);
+let blue ;
+( function () {
+    const header = document.querySelector('h1');
+    header.style.color = 'red';
+    return blue = function(){
+        setTimeout(() => {
+            header.style.color = 'red'
+        }, 1000);
+        header.style.color = 'blue';
+    }
+    })();
+    document.body.addEventListener('click',blue);
